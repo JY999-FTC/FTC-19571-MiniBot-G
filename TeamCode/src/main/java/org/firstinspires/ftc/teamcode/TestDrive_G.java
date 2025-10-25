@@ -66,6 +66,7 @@ public class TestDrive_G extends LinearOpMode {
         while (opModeIsActive()) {
 
             updateTelemetry();
+            telemetryAprilTag();
 
             // Push telemetry to the Driver Station.
             telemetry.update();
@@ -80,9 +81,10 @@ public class TestDrive_G extends LinearOpMode {
             // Share the CPU.
             sleep(20);
 
-            /*
+
             driveTrain(gamepad1.right_stick_x, gamepad1.right_stick_y, gamepad1.left_stick_x);
 
+            /*
             if (gamepad1.x)
                 moveMotor(leftFront, 0.5);
             if (gamepad1.y)
